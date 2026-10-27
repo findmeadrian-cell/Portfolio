@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Adrian Reyhart Portfolio</title>
+  <meta name="description" content="Adrian Reyhart (EIDORIAN): game visual and UI/UX designer.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="home">
+  <!-- ========== HEADER (same on every page) ========== -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="./" aria-label="Adrian Reyhart home">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span class="brand-word">ADRIAN REYHART</span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <a href="work.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="journal.html">Journal</a>
+        <a href="process.html">Process</a>
+        <a href="contact.html">Contact</a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch between light and dark theme">
+          <!-- Sun shows in dark theme (switch to light), moon in light theme -->
+          <svg class="theme-icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1"/></svg>
+          <svg class="theme-icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="home-main">
+    <!-- Each home section fills one screen; on desktop the page snaps from one to the next -->
+
+    <!-- ========== HERO ========== -->
+    <section class="hero screen" id="intro" aria-label="Introduction">
+      <!-- Two portraits: one for each colour theme (CSS shows the right one) -->
+      <div class="hero-media">
+        <img class="hero-img hero-img-dark" src="images/adrian-dark.jpg" alt="Adrian Reyhart in a white t-shirt on a black background">
+        <img class="hero-img hero-img-light" src="images/adrian-light.jpg" alt="Adrian Reyhart in a black t-shirt on a grey background">
+      </div>
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <p class="label">EIDORIAN · Game visual designer</p>
+          <h1 class="hero-title">ADRIAN<br>REYHART</h1>
+          <p class="hero-lede">Game visual and UI/UX designer. I create characters, worlds and interfaces that are clear to use and fun to look at. Freelancing since 2020, formerly Main Designer at HCCPAS, and now studying for a Diploma in Design Media at PSB Academy.</p>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#about-me"><span>Scroll</span></a>
+    </section>
+
+    <!-- ========== 01 ABOUT ME ========== -->
+    <section class="screen" id="about-me" aria-labelledby="about-title">
+      <div class="wrap screen-inner">
+        <header class="screen-head">
+          <p class="screen-index"><span>01</span> About me</p>
+        </header>
+
+        <div class="about-layout">
+          <div class="about-intro">
+            <h2 id="about-title">Discipline in the craft. Fun in the result.</h2>
+            <p class="about-lead">I design the look and feel of games: characters, worlds, interfaces and the brands around them.</p>
+            <p class="muted">Every project starts with research and sketches and ends as 3D models, print layouts or screens. If a player has to stop and think about how something works, the design isn't finished.</p>
+            <a class="btn btn-line" href="about.html">More about me</a>
+          </div>
+
+          <div class="about-side">
+            <dl class="facts">
+              <div><dt>Since 2019</dt><dd>Designing, starting with a Certificate Course in Graphic Design</dd></div>
+              <div><dt>2020 – 2023</dt><dd>Main Designer at HCCPAS</dd></div>
+              <div><dt>2020 – Now</dt><dd>Freelance designer for games, brands and print</dd></div>
+              <div><dt>2026</dt><dd>Diploma in Design Media, PSB Academy</dd></div>
+            </dl>
+
+            <div class="identity-strip">
+              <p class="identity-strip-title">EIDORIAN <span lang="ja">エイドリアン</span></p>
+              <ol class="kanji-row">
+                <li><span lang="ja">英</span>Hero</li>
+                <li><span lang="ja">道</span>The way</li>
+                <li><span lang="ja">理</span>Reason</li>
+                <li><span lang="ja">庵</span>Studio</li>
+              </ol>
+              <p class="muted small">My design identity: "the hero's way, a studio of craft".</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 02 CASE FILES ========== -->
+    <section class="screen" id="case-files" aria-labelledby="work-title">
+      <div class="wrap screen-inner">
+        <header class="screen-head">
+          <p class="screen-index"><span>02</span> Selected work</p>
+        </header>
+        <div class="screen-title-row">
+          <h2 id="work-title">Case files</h2>
+          <p class="muted">Four projects across UI/UX, 3D, print and game design. Open one to see the brief, tools and process.</p>
+        </div>
+        <!-- Shows the projects marked featured: true in js/main.js -->
+        <div class="panels panels-featured" id="panels" data-show="featured"></div>
+        <div class="screen-foot">
+          <a class="btn btn-line" href="work.html">View all work</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 03 PROCESS ========== -->
+    <section class="screen" id="how-i-work" aria-labelledby="process-title">
+      <div class="wrap screen-inner">
+        <header class="screen-head">
+          <p class="screen-index"><span>03</span> How I work</p>
+        </header>
+        <div class="screen-title-row">
+          <h2 id="process-title">From research to result</h2>
+          <p class="muted">The same four steps guide every project, whether it ends as a 3D model, a magazine spread or an app screen.</p>
+        </div>
+        <ol class="process">
+          <li>
+            <h3>Research</h3>
+            <p>Mood boards, references and, for UI/UX work, talking to the people who will use it.</p>
+          </li>
+          <li>
+            <h3>Sketch</h3>
+            <p>Fast thumbnails and wireframes first, then a few strong ideas developed further.</p>
+          </li>
+          <li>
+            <h3>Build</h3>
+            <p>Ideas become 3D models, page layouts or clickable prototypes.</p>
+          </li>
+          <li>
+            <h3>Test and finish</h3>
+            <p>Check it with real users or readers, fix what doesn't work, then polish materials, type and detail.</p>
+          </li>
+        </ol>
+        <div class="screen-foot">
+          <a class="btn btn-line" href="process.html">See my process</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 04 CONTACT ========== -->
+    <section class="screen screen-last" id="contact-me" aria-labelledby="contact-title">
+      <div class="wrap screen-inner">
+        <header class="screen-head">
+          <p class="screen-index"><span>04</span> Contact</p>
+        </header>
+        <div class="screen-title-row">
+          <h2 id="contact-title">Let's work together</h2>
+        </div>
+        <div class="contact-grid">
+          <div>
+            <p>Open to freelance design work, student collaborations and game jams. The quickest way to reach me is by email.</p>
+            <div class="email-row">
+              <!-- The address is put together by js/main.js so spam bots reading the HTML can't collect it -->
+              <span class="email" id="email-text" data-user="hello" data-domain="eidorian.example">hello [at] eidorian.example</span>
+              <button class="btn btn-line btn-small" id="copy-email" type="button">Copy email</button>
+            </div>
+            <p class="copy-status" id="copy-status" role="status"></p>
+            <div class="services">
+              <p class="services-title">What I can help with</p>
+              <ul>
+                <li>UI/UX design</li>
+                <li>Game visuals</li>
+                <li>3D modelling</li>
+                <li>Print and editorial</li>
+                <li>Branding</li>
+              </ul>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contact-form" novalidate>
+            <label for="f-name">Name</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" maxlength="80" required>
+            <label for="f-email">Email</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" maxlength="120" required>
+            <label for="f-msg">Message</label>
+            <textarea id="f-msg" name="message" rows="4" maxlength="2000" required></textarea>
+            <!-- Spam trap: hidden from people, but bots fill it in -->
+            <div class="hp-field" aria-hidden="true">
+              <label for="f-website">Leave this empty</label>
+              <input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off">
+            </div>
+            <button class="btn btn-solid" type="submit">Send message</button>
+            <p class="form-status" id="form-status" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Section dots (desktop): show where you are and jump between sections -->
+  <nav class="section-dots" aria-label="Sections on this page">
+    <a href="#intro" aria-label="Introduction"></a>
+    <a href="#about-me" aria-label="About me"></a>
+    <a href="#case-files" aria-label="Case files"></a>
+    <a href="#how-i-work" aria-label="How I work"></a>
+    <a href="#contact-me" aria-label="Contact"></a>
+  </nav>
+
+  <!-- ========== PROJECT CASE FILE (pop-up) ========== -->
+  <dialog class="casefile" id="casefile" aria-labelledby="cf-title">
+    <div class="cf-inner">
+      <button class="cf-close" id="cf-close" type="button" aria-label="Close">×</button>
+      <div class="cf-art" id="cf-art"></div>
+      <div class="cf-body">
+        <p class="label" id="cf-meta"></p>
+        <h2 id="cf-title"></h2>
+        <p id="cf-summary"></p>
+        <dl class="cf-facts" id="cf-facts"></dl>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ========== FOOTER (same on every page) ========== -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <svg class="footer-mark" viewBox="0 0 200 200" aria-hidden="true"><use href="#samurai-mark"></use></svg>
+      <p>© <span id="year">2026</span> Adrian Reyhart · EIDORIAN</p>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- EIDORIAN mark: placeholder until the final CW1 logo is ready. -->
+  <svg class="svg-sprite" width="0" height="0" aria-hidden="true">
+    <symbol id="samurai-mark" viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="92" fill="#C8102E"/>
+      <g transform="rotate(-38 100 100)">
+        <rect x="96" y="14" width="9" height="104" rx="4" fill="#F2F2F2"/>
+        <rect x="88" y="116" width="25" height="7" rx="3" fill="#111"/>
+        <rect x="96" y="122" width="9" height="30" rx="4" fill="#111"/>
+      </g>
+      <path d="M62 178 Q64 128 100 124 Q136 128 138 178 Z" fill="#111"/>
+      <circle cx="100" cy="92" r="36" fill="#111"/>
+      <ellipse cx="100" cy="50" rx="10" ry="13" fill="#111"/>
+      <rect x="82" y="88" width="13" height="5" rx="2.5" fill="#C8102E"/>
+      <rect x="105" y="88" width="13" height="5" rx="2.5" fill="#C8102E"/>
+    </symbol>
+  </svg>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

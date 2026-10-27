@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Contact · Adrian Reyhart</title>
+  <meta name="description" content="Contact Adrian Reyhart for freelance design work and collaborations.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- ========== HEADER (same on every page) ========== -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="./" aria-label="Adrian Reyhart home">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span class="brand-word">ADRIAN REYHART</span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <a href="work.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="journal.html">Journal</a>
+        <a href="process.html">Process</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch between light and dark theme">
+          <!-- Sun shows in dark theme (switch to light), moon in light theme -->
+          <svg class="theme-icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1"/></svg>
+          <svg class="theme-icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="page-head">
+      <div class="wrap">
+        <p class="label">Contact</p>
+        <h1>Let's work together</h1>
+        <p class="section-lede">Open to freelance design work, student collaborations and game jams.</p>
+      </div>
+    </section>
+
+    <section class="section section-tight contact" aria-label="Contact details">
+      <div class="wrap">
+        <div class="contact-grid">
+          <div>
+            <p>Open to freelance design work, student collaborations and game jams. The quickest way to reach me is by email.</p>
+            <div class="email-row">
+              <!-- The address is put together by js/main.js so spam bots reading the HTML can't collect it -->
+              <span class="email" id="email-text" data-user="hello" data-domain="eidorian.example">hello [at] eidorian.example</span>
+              <button class="btn btn-line btn-small" id="copy-email" type="button">Copy email</button>
+            </div>
+            <p class="copy-status" id="copy-status" role="status"></p>
+            <div class="services">
+              <p class="services-title">What I can help with</p>
+              <ul>
+                <li>UI/UX design</li>
+                <li>Game visuals</li>
+                <li>3D modelling</li>
+                <li>Print and editorial</li>
+                <li>Branding</li>
+              </ul>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contact-form" novalidate>
+            <label for="f-name">Name</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" maxlength="80" required>
+            <label for="f-email">Email</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" maxlength="120" required>
+            <label for="f-msg">Message</label>
+            <textarea id="f-msg" name="message" rows="4" maxlength="2000" required></textarea>
+            <!-- Spam trap: hidden from people, but bots fill it in -->
+            <div class="hp-field" aria-hidden="true">
+              <label for="f-website">Leave this empty</label>
+              <input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off">
+            </div>
+            <button class="btn btn-solid" type="submit">Send message</button>
+            <p class="form-status" id="form-status" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER (same on every page) ========== -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <svg class="footer-mark" viewBox="0 0 200 200" aria-hidden="true"><use href="#samurai-mark"></use></svg>
+      <p>© <span id="year">2026</span> Adrian Reyhart · EIDORIAN</p>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- EIDORIAN mark: placeholder until the final CW1 logo is ready. -->
+  <svg class="svg-sprite" width="0" height="0" aria-hidden="true">
+    <symbol id="samurai-mark" viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="92" fill="#C8102E"/>
+      <g transform="rotate(-38 100 100)">
+        <rect x="96" y="14" width="9" height="104" rx="4" fill="#F2F2F2"/>
+        <rect x="88" y="116" width="25" height="7" rx="3" fill="#111"/>
+        <rect x="96" y="122" width="9" height="30" rx="4" fill="#111"/>
+      </g>
+      <path d="M62 178 Q64 128 100 124 Q136 128 138 178 Z" fill="#111"/>
+      <circle cx="100" cy="92" r="36" fill="#111"/>
+      <ellipse cx="100" cy="50" rx="10" ry="13" fill="#111"/>
+      <rect x="82" y="88" width="13" height="5" rx="2.5" fill="#C8102E"/>
+      <rect x="105" y="88" width="13" height="5" rx="2.5" fill="#C8102E"/>
+    </symbol>
+  </svg>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
