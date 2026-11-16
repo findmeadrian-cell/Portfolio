@@ -8,6 +8,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/simply-creations/icon-32.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="images/simply-creations/icon-512.png">
+  <link rel="apple-touch-icon" href="images/simply-creations/apple-touch-icon.png">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -22,6 +25,7 @@
       <nav class="site-nav" id="site-nav" aria-label="Main">
         <a href="work.html">Work</a>
         <a href="about.html">About</a>
+        <a href="cv.html">CV</a>
         <a href="journal.html">Journal</a>
         <a href="process.html">Process</a>
         <a href="contact.html" aria-current="page">Contact</a>
@@ -39,7 +43,7 @@
       <div class="wrap">
         <p class="label">Contact</p>
         <h1>Let's work together</h1>
-        <p class="section-lede">Open to freelance design work, student collaborations and game jams.</p>
+        <p class="section-lede">Open to freelance design work and student collaborations.</p>
       </div>
     </section>
 
@@ -47,18 +51,19 @@
       <div class="wrap">
         <div class="contact-grid">
           <div>
-            <p>Open to freelance design work, student collaborations and game jams. The quickest way to reach me is by email.</p>
+            <p>The quickest way to reach me is by email. Tell me a little about your project, your timeline and what you need.</p>
             <div class="email-row">
               <!-- The address is put together by js/main.js so spam bots reading the HTML can't collect it -->
-              <span class="email" id="email-text" data-user="hello" data-domain="eidorian.example">hello [at] eidorian.example</span>
+              <span class="email" id="email-text" data-user="findme.adrian" data-domain="gmail.com">findme.adrian [at] gmail.com</span>
               <button class="btn btn-line btn-small" id="copy-email" type="button">Copy email</button>
             </div>
             <p class="copy-status" id="copy-status" role="status"></p>
+            <p class="cv-link-row"><a class="btn btn-line btn-small" href="cv.html">View my CV</a><a class="btn btn-line btn-small" href="Adrian-Reyhart-CV-2026.pdf" download>Main CV (PDF)</a><a class="btn btn-line btn-small" href="Adrian-Reyhart-CV-Standard.pdf" download>Standard CV (PDF)</a></p>
             <div class="services">
               <p class="services-title">What I can help with</p>
               <ul>
                 <li>UI/UX design</li>
-                <li>Game visuals</li>
+                <li>Social media design</li>
                 <li>3D modelling</li>
                 <li>Print and editorial</li>
                 <li>Branding</li>
@@ -89,28 +94,12 @@
   <!-- ========== FOOTER (same on every page) ========== -->
   <footer class="site-footer">
     <div class="wrap footer-inner">
-      <svg class="footer-mark" viewBox="0 0 200 200" aria-hidden="true"><use href="#samurai-mark"></use></svg>
-      <p>© <span id="year">2026</span> Adrian Reyhart · EIDORIAN</p>
+      <span class="brand-dot footer-dot" aria-hidden="true"></span>
+      <p>© <span id="year">2026</span> Adrian Reyhart</p>
       <a href="#top">Back to top ↑</a>
     </div>
   </footer>
 
-  <!-- EIDORIAN mark: placeholder until the final CW1 logo is ready. -->
-  <svg class="svg-sprite" width="0" height="0" aria-hidden="true">
-    <symbol id="samurai-mark" viewBox="0 0 200 200">
-      <circle cx="100" cy="100" r="92" fill="#C8102E"/>
-      <g transform="rotate(-38 100 100)">
-        <rect x="96" y="14" width="9" height="104" rx="4" fill="#F2F2F2"/>
-        <rect x="88" y="116" width="25" height="7" rx="3" fill="#111"/>
-        <rect x="96" y="122" width="9" height="30" rx="4" fill="#111"/>
-      </g>
-      <path d="M62 178 Q64 128 100 124 Q136 128 138 178 Z" fill="#111"/>
-      <circle cx="100" cy="92" r="36" fill="#111"/>
-      <ellipse cx="100" cy="50" rx="10" ry="13" fill="#111"/>
-      <rect x="82" y="88" width="13" height="5" rx="2.5" fill="#C8102E"/>
-      <rect x="105" y="88" width="13" height="5" rx="2.5" fill="#C8102E"/>
-    </symbol>
-  </svg>
 
   <script src="js/main.js"></script>
 </body>

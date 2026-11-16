@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>CodePlay · Adrian Reyhart</title>
+  <meta name="description" content="CodePlay: a gamified app that makes learning to code feel like a game, UI/UX case study by Adrian Reyhart.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/simply-creations/icon-32.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="images/simply-creations/icon-512.png">
+  <link rel="apple-touch-icon" href="images/simply-creations/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- ========== HEADER (same on every page) ========== -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="./" aria-label="Adrian Reyhart home">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span class="brand-word">ADRIAN REYHART</span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <a href="work.html" aria-current="page">Work</a>
+        <a href="about.html">About</a>
+        <a href="cv.html">CV</a>
+        <a href="journal.html">Journal</a>
+        <a href="process.html">Process</a>
+        <a href="contact.html">Contact</a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch between light and dark theme">
+          <!-- Sun shows in dark theme (switch to light), moon in light theme -->
+          <svg class="theme-icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1"/></svg>
+          <svg class="theme-icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="page-head">
+      <div class="wrap">
+        <p class="label">Case file · UI/UX</p>
+        <h1>CodePlay</h1>
+        <p class="section-lede">A gamified app that makes learning to code feel like playing a game.</p>
+      </div>
+    </section>
+    <section class="section section-tight" aria-label="Project overview">
+      <div class="wrap">
+        <img class="cs-hero" src="images/codeplay/hero.jpg" alt="CodePlay Learn to code welcome screen on a grid of phones" width="2000" height="1500">
+        <dl class="cs-facts">
+          <div><dt>Project</dt><dd>Gamification app, UI/UX design</dd></div>
+          <div><dt>Context</dt><dd>School assignment</dd></div>
+          <div><dt>Tools</dt><dd>Figma</dd></div>
+          <div><dt>Role</dt><dd>Research, UX and UI design</dd></div>
+        </dl>
+        <div class="cs-intro">
+          <div>
+            <h2 class="cs-h"><span>01</span>The brief</h2>
+            <p>Design an app that uses gamification to change a behaviour. I chose learning to code: many beginners give up because lessons feel long, hard and lonely.</p>
+          </div>
+          <div>
+            <h2 class="cs-h"><span>02</span>The idea</h2>
+            <p>Turn every lesson into a level. Short lessons, coding challenges with instant feedback, XP, badges, streaks and a weekly leaderboard with friends, guided by a friendly robot mascot. As Daniel, our user, put it: “I want to learn coding, but I don’t want it to feel like studying.”</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section section-tight" aria-labelledby="cs-r-title">
+      <div class="wrap">
+        <h2 class="cs-h" id="cs-r-title"><span>03</span>Research and structure</h2>
+        <div class="cs-grid">
+        <figure class="cs-slide">
+          <img src="images/codeplay/r-persona.jpg" alt="CodePlay user persona Daniel" loading="lazy" width="767" height="512">
+          <figcaption><span>01</span><b>User persona</b> Daniel, 21, a diploma student in Singapore. He wants to learn coding, but finds it intimidating and loses motivation when he gets stuck.</figcaption>
+        </figure>
+        <figure class="cs-slide">
+          <img src="images/codeplay/r-sitemap.jpg" alt="CodePlay sitemap" loading="lazy" width="767" height="512">
+          <figcaption><span>02</span><b>Sitemap</b> Five main areas: Home, Learn, Build, Leaderboard and Profile, each with its own tools such as daily challenges, timed mode and badges.</figcaption>
+        </figure>
+        <figure class="cs-slide">
+          <img src="images/codeplay/r-user-flow.jpg" alt="CodePlay user flow" loading="lazy" width="767" height="512">
+          <figcaption><span>03</span><b>User flow</b> The core loop: continue learning, a short lesson, a challenge, instant feedback, then a reward and the next level.</figcaption>
+        </figure>
+        <figure class="cs-slide">
+          <img src="images/codeplay/r-icons.jpg" alt="CodePlay icons, navigation bars and level path" loading="lazy" width="376" height="512">
+          <figcaption><span>04</span><b>Icons and components</b> The robot mascot, icon set, navigation bar states and the locked and unlocked nodes of the level path.</figcaption>
+        </figure>
+        </div>
+      </div>
+    </section>
+    <section class="section section-tight" aria-labelledby="cs-s-title">
+      <div class="wrap">
+        <h2 class="cs-h" id="cs-s-title"><span>04</span>Final screens</h2>
+        <div class="cs-grid">
+        <figure class="cs-slide">
+          <img src="images/codeplay/01-leaderboard.jpg" alt="CodePlay weekly leaderboard screen" loading="lazy" width="2000" height="1500">
+          <figcaption><span>01</span><b>Weekly leaderboard</b> Friends and world rankings, with a trophy and a clear way to start competing.</figcaption>
+        </figure>
+        <figure class="cs-slide">
+          <img src="images/codeplay/02-achievements.jpg" alt="CodePlay achievements screen" loading="lazy" width="2000" height="1500">
+          <figcaption><span>02</span><b>Achievements</b> XP, streaks and badges show progress at a glance.</figcaption>
+        </figure>
+        <figure class="cs-slide">
+          <img src="images/codeplay/03-add-friends.jpg" alt="CodePlay add friends screen" loading="lazy" width="2000" height="1500">
+          <figcaption><span>03</span><b>Add friends</b> Friend requests and suggestions, because learning is more fun with others.</figcaption>
+        </figure>
+        <figure class="cs-slide">
+          <img src="images/codeplay/04-learning-path.jpg" alt="CodePlay learning path screen" loading="lazy" width="2000" height="1500">
+          <figcaption><span>04</span><b>Learning path</b> Lessons unlock one by one on a path, like levels in a game.</figcaption>
+        </figure>
+        <figure class="cs-slide">
+          <img src="images/codeplay/05-lesson.jpg" alt="CodePlay Basics of CSS lesson screen" loading="lazy" width="2000" height="1500">
+          <figcaption><span>05</span><b>Lesson</b> Short, bite-sized exercises, then a button to check your knowledge.</figcaption>
+        </figure>
+        <figure class="cs-slide">
+          <img src="images/codeplay/06-challenge.jpg" alt="CodePlay coding challenge screen" loading="lazy" width="2000" height="1500">
+          <figcaption><span>06</span><b>Challenge</b> A real task with a code editor, a timer, an XP reward and a live preview.</figcaption>
+        </figure>
+        <figure class="cs-slide">
+          <img src="images/codeplay/07-challenge-angle.jpg" alt="CodePlay challenge screen at an angle" loading="lazy" width="2000" height="1500">
+          <figcaption><span>07</span><b>Challenge, in hand</b> The same challenge screen shown at an angle.</figcaption>
+        </figure>
+        <figure class="cs-slide">
+          <img src="images/codeplay/08-settings.jpg" alt="CodePlay settings screen" loading="lazy" width="2000" height="1500">
+          <figcaption><span>08</span><b>Settings</b> Profile, app settings and preferences in one simple list.</figcaption>
+        </figure>
+        </div>
+        <div class="cs-nav">
+          <a class="btn btn-line" href="work.html">← All work</a>
+          <a class="btn btn-solid" href="contact.html">Start a project</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER (same on every page) ========== -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <span class="brand-dot footer-dot" aria-hidden="true"></span>
+      <p>© <span id="year">2026</span> Adrian Reyhart</p>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+
+  <script src="js/main.js"></script>
+</body>
+</html>

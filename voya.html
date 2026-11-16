@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>VOYA travel app · Adrian Reyhart</title>
+  <meta name="description" content="VOYA: a travel companion app designed in Figma by Adrian Reyhart.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/simply-creations/icon-32.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="images/simply-creations/icon-512.png">
+  <link rel="apple-touch-icon" href="images/simply-creations/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- ========== HEADER (same on every page) ========== -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="./" aria-label="Adrian Reyhart home">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span class="brand-word">ADRIAN REYHART</span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <a href="work.html" aria-current="page">Work</a>
+        <a href="about.html">About</a>
+        <a href="cv.html">CV</a>
+        <a href="journal.html">Journal</a>
+        <a href="process.html">Process</a>
+        <a href="contact.html">Contact</a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch between light and dark theme">
+          <!-- Sun shows in dark theme (switch to light), moon in light theme -->
+          <svg class="theme-icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1"/></svg>
+          <svg class="theme-icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="page-head">
+      <div class="wrap">
+        <p class="label">Case file · UI/UX</p>
+        <h1>VOYA travel app</h1>
+        <p class="section-lede">A travel companion app that keeps finding, planning and booking a trip in one friendly place.</p>
+      </div>
+    </section>
+
+    <section class="section section-tight" aria-label="Project overview">
+      <div class="wrap">
+        <img class="cs-hero" src="images/voya/hero.jpg" alt="VOYA welcome screens on a grid of phones" width="2000" height="1500">
+        <dl class="cs-facts">
+          <div><dt>Project</dt><dd>Mobile app, UI/UX design</dd></div>
+          <div><dt>Process</dt><dd>Persona, sitemap, user flow, wireframes, style guide</dd></div>
+          <div><dt>Tools</dt><dd>Figma</dd></div>
+          <div><dt>Outcome</dt><dd>12 high-fidelity screens</dd></div>
+        </dl>
+        <div class="cs-intro">
+          <div>
+            <h2 class="cs-h"><span>01</span>The brief</h2>
+            <p>Planning a trip usually means jumping between many apps for stays, flights, activities and transport. VOYA brings them together so travellers can discover, plan and book in one place.</p>
+          </div>
+          <div>
+            <h2 class="cs-h"><span>02</span>The user</h2>
+            <p>Luna Castro, 25, is a scientist in Singapore who loves new places, local food and sharing her trips online. She is tired of needing many apps to book, plan and find her way, of cluttered travel apps, and of recommendations she can't trust.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight" aria-labelledby="cs-process-title">
+      <div class="wrap">
+        <h2 class="cs-h" id="cs-process-title"><span>03</span>Research and structure</h2>
+        <div class="cs-slides">
+        <figure class="cs-slide cs-slide-small">
+          <img src="images/voya/p1-persona.jpg" alt="User persona for Luna Castro: goals, needs, interests, frustrations and favourite places" loading="lazy" width="911" height="512">
+          <figcaption><span>01</span><b>User persona</b> Her goals and frustrations set the priorities: one place for everything, a clean layout and recommendations from real travellers.</figcaption>
+        </figure>
+        <figure class="cs-slide">
+          <img src="images/voya/p2-sitemap.jpg" alt="VOYA sitemap: login, home, plan, explore, my bookings and settings with their sub-pages" loading="lazy" width="2400" height="1350">
+          <figcaption><span>02</span><b>Sitemap</b> Six main areas around the home screen: Login, Home, Plan, Explore, My Bookings and Settings.</figcaption>
+        </figure>
+        <figure class="cs-slide cs-slide-small">
+          <img src="images/voya/p3-user-flow.jpg" alt="User flow: plan the trip, explore trips, enter details, create a budget, compare plans, customise the trip, book the trip" loading="lazy" width="911" height="512">
+          <figcaption><span>03</span><b>User flow</b> The main journey in seven steps, from planning the trip to booking it.</figcaption>
+        </figure>
+        <figure class="cs-slide">
+          <img src="images/voya/p4-figma-overview.jpg" alt="The VOYA Figma file: persona, sitemap, user flow, style guide, 12 wireframes and the 12 matching final screens" loading="lazy" width="1380" height="641">
+          <figcaption><span>04</span><b>From wireframes to screens</b> The full Figma file: the style guide on the left, then 12 wireframes above the 12 final screens they became.</figcaption>
+        </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight" aria-labelledby="cs-style-title">
+      <div class="wrap">
+        <h2 class="cs-h" id="cs-style-title"><span>04</span>Style guide</h2>
+        <div class="cs-split">
+          <figure class="cs-slide cs-tall">
+            <img src="images/voya/p5-style-guide.jpg" alt="VOYA style guide: colour palette, fonts, icons, app logo and system bar" loading="lazy" width="1200" height="2460">
+          </figure>
+          <div class="cs-split-text">
+            <p>A small design system kept all 12 screens consistent before any final screen was built.</p>
+            <dl class="cs-spec">
+              <div><dt>Colour</dt><dd>Main green #02C708, icon green #186505, font colour #071D0B, plus a soft green background gradient.</dd></div>
+              <div><dt>Type</dt><dd>One clean, rounded sans serif for headings, body text and numbers.</dd></div>
+              <div><dt>Icons</dt><dd>Every icon drawn in a filled and an outline version, so the active tab is easy to spot.</dd></div>
+              <div><dt>Logo</dt><dd>A map pin with mountains and a flight path, in green, dark green and black.</dd></div>
+              <div><dt>Extras</dt><dd>Category icons for stays, activities, hotels and flights, social sign-in buttons and the system bar.</dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight" aria-labelledby="cs-screens-title">
+      <div class="wrap">
+        <h2 class="cs-h" id="cs-screens-title"><span>05</span>Final screens</h2>
+        <div class="cs-slides">
+        <figure class="cs-slide">
+          <img src="images/voya/01-home.jpg" alt="VOYA home screen on a phone mockup" loading="lazy" width="2000" height="1500">
+          <figcaption><span>01</span><b>Home</b> Stays, activities, flights, hotels and transport in one place, with a welcome pack for new users and trending spots below.</figcaption>
+        </figure>
+        <figure class="cs-slide">
+          <img src="images/voya/02-search.jpg" alt="VOYA where to? screen on a phone mockup" loading="lazy" width="2000" height="1500">
+          <figcaption><span>02</span><b>Where to?</b> Search for places, things to do or hotels, with suggestions nearby and ideas for the coming days.</figcaption>
+        </figure>
+        <figure class="cs-slide">
+          <img src="images/voya/03-activities.jpg" alt="VOYA activities screen on a phone mockup" loading="lazy" width="2000" height="1500">
+          <figcaption><span>03</span><b>Activities</b> Guides to experiences across Asia, from hidden corners of Bangkok to festivals in Bali and the Ella to Kandy train.</figcaption>
+        </figure>
+        <figure class="cs-slide">
+          <img src="images/voya/04-settings.jpg" alt="VOYA settings screen on a phone mockup" loading="lazy" width="2000" height="1500">
+          <figcaption><span>04</span><b>Settings</b> Account, security, rewards and preferences grouped into clear cards.</figcaption>
+        </figure>
+        </div>
+        <div class="cs-nav">
+          <a class="btn btn-line" href="work.html">← All work</a>
+          <a class="btn btn-solid" href="contact.html">Start a project</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER (same on every page) ========== -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <span class="brand-dot footer-dot" aria-hidden="true"></span>
+      <p>© <span id="year">2026</span> Adrian Reyhart</p>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+
+  <script src="js/main.js"></script>
+</body>
+</html>

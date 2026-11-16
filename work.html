@@ -4,10 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Work · Adrian Reyhart</title>
-  <meta name="description" content="Case files: UI/UX, 3D, print, game and brand projects by Adrian Reyhart.">
+  <meta name="description" content="Case files: UI/UX, 3D, print and brand projects by Adrian Reyhart.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/simply-creations/icon-32.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="images/simply-creations/icon-512.png">
+  <link rel="apple-touch-icon" href="images/simply-creations/apple-touch-icon.png">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -22,6 +25,7 @@
       <nav class="site-nav" id="site-nav" aria-label="Main">
         <a href="work.html" aria-current="page">Work</a>
         <a href="about.html">About</a>
+        <a href="cv.html">CV</a>
         <a href="journal.html">Journal</a>
         <a href="process.html">Process</a>
         <a href="contact.html">Contact</a>
@@ -50,7 +54,6 @@
           <button class="chip" data-filter="ui/ux" type="button" aria-pressed="false">UI/UX</button>
           <button class="chip" data-filter="3d" type="button" aria-pressed="false">3D</button>
           <button class="chip" data-filter="print" type="button" aria-pressed="false">Print</button>
-          <button class="chip" data-filter="game" type="button" aria-pressed="false">Game</button>
           <button class="chip" data-filter="brand" type="button" aria-pressed="false">Brand</button>
         </div>
         <!-- Panels are built from the PROJECTS list in js/main.js -->
@@ -76,28 +79,12 @@
   <!-- ========== FOOTER (same on every page) ========== -->
   <footer class="site-footer">
     <div class="wrap footer-inner">
-      <svg class="footer-mark" viewBox="0 0 200 200" aria-hidden="true"><use href="#samurai-mark"></use></svg>
-      <p>© <span id="year">2026</span> Adrian Reyhart · EIDORIAN</p>
+      <span class="brand-dot footer-dot" aria-hidden="true"></span>
+      <p>© <span id="year">2026</span> Adrian Reyhart</p>
       <a href="#top">Back to top ↑</a>
     </div>
   </footer>
 
-  <!-- EIDORIAN mark: placeholder until the final CW1 logo is ready. -->
-  <svg class="svg-sprite" width="0" height="0" aria-hidden="true">
-    <symbol id="samurai-mark" viewBox="0 0 200 200">
-      <circle cx="100" cy="100" r="92" fill="#C8102E"/>
-      <g transform="rotate(-38 100 100)">
-        <rect x="96" y="14" width="9" height="104" rx="4" fill="#F2F2F2"/>
-        <rect x="88" y="116" width="25" height="7" rx="3" fill="#111"/>
-        <rect x="96" y="122" width="9" height="30" rx="4" fill="#111"/>
-      </g>
-      <path d="M62 178 Q64 128 100 124 Q136 128 138 178 Z" fill="#111"/>
-      <circle cx="100" cy="92" r="36" fill="#111"/>
-      <ellipse cx="100" cy="50" rx="10" ry="13" fill="#111"/>
-      <rect x="82" y="88" width="13" height="5" rx="2.5" fill="#C8102E"/>
-      <rect x="105" y="88" width="13" height="5" rx="2.5" fill="#C8102E"/>
-    </symbol>
-  </svg>
 
   <script src="js/main.js"></script>
 </body>

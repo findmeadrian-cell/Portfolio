@@ -1,0 +1,4 @@
+# How to report a security problem with this website (https://securitytxt.org)
+Contact: mailto:findme.adrian@gmail.com
+Expires: 2027-10-26T00:00:00.000Z
+Preferred-Languages: en

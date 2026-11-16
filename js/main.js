@@ -7,6 +7,7 @@
    5. Experience timeline (about page)
    6. Page transition between pages
    7. Home section dots
+   8. Logo dot animation
    Each part only runs on pages that have its elements.
    ========================================================= */
 
@@ -14,31 +15,183 @@
    To add a real image, put it in /images and set image: "images/your-file.jpg".
    Projects without an image show placeholder artwork.
    "tags" decide which filter buttons show a project.
-   "featured: true" puts a project in the best 4 on the home page. */
+   "featured: true" puts a project in the best 4 on the home page.
+   "page" (optional) links the pop-up to a full case study page. */
 const PROJECTS = [
   {
     id: "logo",
-    title: "EIDORIAN Identity",
+    title: "Simply Creations 3D Logo",
     tags: ["3D", "Brand"],
     size: "wide",
-    featured: true,
+    featured: false,
     module: "3D Design · Coursework 1",
-    summary: "A minimalist samurai combination mark for EIDORIAN, my design identity, modelled and rendered in Rhino.",
+    summary: "The Simply Creations logo, four people around a table, refreshed and built as a 3D model in Rhino.",
     facts: {
       Brief: "Design a logo and build it as a 3D model.",
-      Tools: "Rhino, Photoshop",
-      Idea: "A samurai in a red sun, with the katana as the I in EIDORIAN.",
-      Materials: "Red lacquer, matte black, polished steel"
+      Tools: "Rhino, Illustrator",
+      Idea: "Four figures around a table, each bringing a different idea.",
+      Status: "3D renders coming soon"
     },
-    image: "",
-    art: "sun"
+    image: "images/simply-creations-cover.jpg"
+  },
+  {
+    id: "simply-creations",
+    title: "Simply Creations",
+    tags: ["Brand"],
+    size: "",
+    featured: true,
+    module: "Logo design",
+    summary: "The logo for the design studio I founded: four people around one table, each bringing a different idea, from sketch to final mark.",
+    facts: {
+      Brief: "A logo for a four-person design studio that feels simple, friendly and clear.",
+      Tools: "Illustrator",
+      Idea: "Four figures around a table, one colour for each member.",
+      Deliverables: "Logo, colours, typography, five logo versions"
+    },
+    image: "images/simply-creations/case/card.jpg",
+    page: "simply-creations.html"
+  },
+  {
+    id: "voya",
+    title: "VOYA Travel App",
+    tags: ["UI/UX"],
+    size: "half",
+    featured: true,
+    module: "UI/UX · Mobile app",
+    summary: "A travel companion app that brings stays, flights, activities and transport into one place, from persona and user flow to 12 final screens.",
+    facts: {
+      Brief: "Let travellers discover, plan and book a trip in one app.",
+      Tools: "Figma",
+      Process: "Persona, sitemap, user flow, wireframes, style guide, final screens",
+      Outcome: "12 high-fidelity screens"
+    },
+    image: "images/voya/cover.jpg",
+    page: "voya.html"
+  },
+  {
+    id: "codeplay",
+    title: "CodePlay",
+    tags: ["UI/UX"],
+    size: "half",
+    featured: false,
+    module: "UI/UX · Gamification app",
+    summary: "A gamified app that makes learning to code feel like a game: short lessons, coding challenges, XP, badges and a weekly leaderboard.",
+    facts: {
+      Brief: "Use gamification to help beginners keep learning to code.",
+      Tools: "Figma",
+      User: "Daniel, 21, a diploma student who gets bored with long tutorials",
+      Features: "Learning path, challenges, XP and badges, leaderboard, friends"
+    },
+    image: "images/codeplay/cover.jpg",
+    page: "codeplay.html"
+  },
+  {
+    id: "oak-beech",
+    title: "Oak & Beech",
+    tags: ["Brand", "Print"],
+    size: "",
+    featured: true,
+    module: "Brand identity",
+    summary: "A calm, warm identity for a premium furniture seller: four leaves joined into a circle, a woodland palette and full brand guidelines.",
+    facts: {
+      Brief: "Create an identity that feels less like a showroom and more like home.",
+      Tools: "Illustrator, Photoshop",
+      Idea: "Two pairs of leaves, oak and beech, meeting like people around a table.",
+      Deliverables: "Logo, colour system, pattern, stationery, signage"
+    },
+    image: "images/oak-beech/cover.jpg",
+    page: "oak-beech.html"
+  },
+  {
+    id: "looco-arabica",
+    title: "Looco Arabica",
+    tags: ["Brand", "Print"],
+    size: "",
+    featured: true,
+    module: "Brand identity",
+    summary: "A warm, refined identity for a modern Arabian café: layered arches like doorways and rising steam, navy and desert gold, and full brand guidelines.",
+    facts: {
+      Brief: "A café brand rooted in Arabian coffee culture, with a modern feel.",
+      Tools: "Illustrator, Photoshop",
+      Idea: "Layered arches that form an L, like a doorway and rising steam.",
+      Deliverables: "Logo, colour system, pattern, cups and packaging, signage"
+    },
+    image: "images/looco-arabica/cover.jpg",
+    page: "looco-arabica.html"
+  },
+  {
+    id: "drift-coffee",
+    title: "Drift Coffee Co.",
+    tags: ["Brand", "Print"],
+    size: "",
+    featured: false,
+    module: "Brand identity · Simply Creations",
+    summary: "A third-wave café brand inspired by the calm of ocean waves: a round cup badge, warm espresso browns and a wave-like swirl pattern.",
+    facts: {
+      Brief: "My own concept brand for a calm, modern coffee shop.",
+      Tools: "Illustrator, Photoshop",
+      Studio: "Simply Creations (2021–2024)",
+      Deliverables: "Logo, mood board, pattern, packaging, bag, poster"
+    },
+    image: "images/drift-coffee/cover.jpg",
+    page: "drift-coffee.html"
+  },
+  {
+    id: "pepperpoint",
+    title: "Pepperpoint",
+    tags: ["Print", "Brand"],
+    size: "",
+    featured: false,
+    module: "Menu and social media · Simply Creations",
+    summary: "A full menu, opening posts and social media for Pepperpoint Restaurant and Bar in Dompe, Sri Lanka, with some posts in Sinhala.",
+    facts: {
+      Client: "Pepperpoint Restaurant and Bar, Dompe, Sri Lanka",
+      Tools: "Photoshop, Illustrator",
+      Studio: "Simply Creations (2021–2024)",
+      Deliverables: "Menu, opening post, food posts, anniversary post"
+    },
+    image: "images/pepperpoint/cover.jpg",
+    page: "pepperpoint.html"
+  },
+  {
+    id: "oriflame",
+    title: "Oriflame Sri Lanka",
+    tags: ["Print", "Brand"],
+    size: "",
+    featured: false,
+    module: "Social media · Simply Creations",
+    summary: "Social media posts for Oriflame cosmetics in Sri Lanka, promoting beauty workshops, offers and part-time business opportunities, in Sinhala and English.",
+    facts: {
+      Client: "Oriflame Sri Lanka (cosmetics)",
+      Tools: "Photoshop, Illustrator",
+      Studio: "Simply Creations (2023)",
+      Deliverables: "12 posts: workshops, offers, recruitment"
+    },
+    image: "images/oriflame/cover.jpg",
+    page: "oriflame.html"
+  },
+  {
+    id: "freelance",
+    title: "Freelance Designs",
+    tags: ["Print", "Brand"],
+    size: "",
+    featured: false,
+    module: "Freelance",
+    summary: "Song covers, logos, a wedding invitation and festival greeting posts made for clients in Sri Lanka.",
+    facts: {
+      Clients: "Musicians, small businesses, clubs, families",
+      Work: "Song covers, logos, invitation, greeting posts",
+      Years: "2021–2024"
+    },
+    image: "images/freelance/cover.jpg",
+    page: "freelance.html"
   },
   {
     id: "magazine",
     title: "Magazine Design",
     tags: ["Print"],
-    size: "",
-    featured: true,
+    size: "half",
+    featured: false,
     module: "Print Media Design",
     summary: "An editorial magazine: cover, contents and feature spreads built on a strong grid.",
     facts: {
@@ -51,73 +204,10 @@ const PROJECTS = [
     art: "grid"
   },
   {
-    id: "app",
-    title: "Game Companion App",
-    tags: ["UI/UX"],
-    size: "half",
-    featured: true,
-    module: "UI/UX · Personal project",
-    summary: "A mobile app that lets players track quests and loadouts, from user research and wireframes to a clickable prototype.",
-    facts: {
-      Brief: "Help players plan their next session away from the console.",
-      Tools: "Figma",
-      Process: "User interviews, user flows, wireframes, prototype, usability test",
-      Status: "Placeholder: replace with your own project"
-    },
-    image: "",
-    art: "phone"
-  },
-  {
-    id: "hud",
-    title: "Game HUD Kit",
-    tags: ["Game", "UI/UX"],
-    size: "half",
-    module: "UI/UX · Personal project",
-    summary: "Health, stamina and inventory UI designed to stay readable during fast combat.",
-    facts: {
-      Brief: "Design a HUD players can read at a glance.",
-      Tools: "Figma, Illustrator",
-      Status: "Placeholder: replace with your own project"
-    },
-    image: "",
-    art: "hud"
-  },
-  {
-    id: "character",
-    title: "Character Sheet",
-    tags: ["Game"],
-    size: "",
-    featured: true,
-    module: "Personal project",
-    summary: "A game hero shown as turnarounds, poses and colour tests.",
-    facts: {
-      Brief: "Design a hero that reads clearly at small sizes.",
-      Tools: "Photoshop",
-      Status: "Placeholder: replace with your own project"
-    },
-    image: "",
-    art: "figure"
-  },
-  {
-    id: "environment",
-    title: "Level Concept",
-    tags: ["Game", "3D"],
-    size: "",
-    module: "Personal project",
-    summary: "A level concept from block-out to lit render.",
-    facts: {
-      Brief: "Design one playable level with a clear route.",
-      Tools: "Blender",
-      Status: "Placeholder: replace with your own project"
-    },
-    image: "",
-    art: "level"
-  },
-  {
     id: "website",
     title: "This Portfolio",
     tags: ["Web", "UI/UX"],
-    size: "",
+    size: "half",
     module: "Portfolio Design",
     summary: "A live, minimalist portfolio coded by hand in HTML, CSS and JavaScript.",
     facts: {
@@ -132,7 +222,6 @@ const PROJECTS = [
 
 /* ---------- Placeholder artwork (simple SVG shapes) ---------- */
 const ART = {
-  sun: `<svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice"><rect width="320" height="200" fill="#111"/><use href="#samurai-mark" x="100" y="30" width="140" height="140"/></svg>`,
   grid: `<svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice"><rect width="320" height="200" fill="#ececea"/><rect x="90" y="24" width="70" height="152" fill="#fff"/><rect x="160" y="24" width="70" height="152" fill="#fff"/><rect x="100" y="36" width="50" height="60" fill="#111"/><g fill="#999"><rect x="100" y="106" width="50" height="3"/><rect x="100" y="114" width="50" height="3"/><rect x="100" y="122" width="36" height="3"/><rect x="170" y="36" width="50" height="3"/><rect x="170" y="44" width="50" height="3"/></g><rect x="170" y="60" width="50" height="10" fill="#d81f26"/></svg>`,
   phone: `<svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice"><rect width="320" height="200" fill="#ececea"/><rect x="128" y="20" width="64" height="170" rx="10" fill="#111"/><rect x="134" y="30" width="52" height="150" rx="4" fill="#fff"/><rect x="140" y="40" width="30" height="6" fill="#111"/><rect x="140" y="56" width="40" height="22" fill="#d81f26"/><g fill="#ccc"><rect x="140" y="86" width="40" height="8"/><rect x="140" y="100" width="40" height="8"/><rect x="140" y="114" width="40" height="8"/></g></svg>`,
   hud: `<svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice"><rect width="320" height="200" fill="#111"/><rect x="24" y="24" width="150" height="10" fill="#333"/><rect x="24" y="24" width="110" height="10" fill="#d81f26"/><rect x="24" y="40" width="100" height="6" fill="#333"/><rect x="24" y="40" width="70" height="6" fill="#fff"/><g fill="none" stroke="#fff" stroke-width="2"><rect x="196" y="144" width="28" height="28"/><rect x="232" y="144" width="28" height="28"/><rect x="268" y="144" width="28" height="28"/></g></svg>`,
@@ -166,7 +255,7 @@ function renderPanels() {
     <button class="panel ${esc(p.size)}" type="button" data-id="${esc(p.id)}">
       <span class="panel-art">
         ${artFor(p)}
-        <span class="panel-tag">${esc(p.tags.join(" · "))}</span>
+        <span class="panel-tags">${p.tags.map(t => `<span class="panel-tag" data-tag="${esc(t.toLowerCase())}">${esc(t)}</span>`).join("")}</span>
       </span>
       <span class="panel-body">
         <span class="panel-title">${esc(p.title)}</span>
@@ -208,6 +297,17 @@ function openCaseFile(id) {
   document.getElementById("cf-summary").textContent = p.summary;
   document.getElementById("cf-facts").innerHTML = Object.entries(p.facts)
     .map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("");
+  // Projects with their own case study page get a button to open it
+  let link = document.getElementById("cf-link");
+  if (!link) {
+    link = document.createElement("a");
+    link.id = "cf-link";
+    link.className = "btn btn-solid cf-link";
+    link.textContent = "View full case study";
+    document.getElementById("cf-facts").after(link);
+  }
+  link.hidden = !p.page;
+  if (p.page) link.href = p.page;
   dialog.showModal();
 }
 
@@ -313,12 +413,20 @@ const timeline = document.getElementById("timeline");
 
 function updateTimeline() {
   const box = timeline.getBoundingClientRect();
-  const mark = window.innerHeight * 0.65;            // the line reaches this point on screen
-  const progress = Math.min(Math.max((mark - box.top) / box.height, 0), 1);
+  const mark = window.innerHeight * 0.6;             // an entry lights up when its dot passes this point
+  const dots = [...timeline.querySelectorAll(".tl-dot")].map(dot => {
+    const r = dot.getBoundingClientRect();
+    return r.top + r.height / 2;                      // centre of each dot on screen
+  });
+  const first = dots[0], last = dots[dots.length - 1];
+  // The grey line runs from the first dot to the last dot
+  timeline.style.setProperty("--line-start", (first - box.top) + "px");
+  timeline.style.setProperty("--line-length", (last - first) + "px");
+  // The red fill reaches each dot at the same moment that entry lights up
+  const progress = Math.min(Math.max((mark - first) / (last - first), 0), 1);
   timeline.style.setProperty("--progress", progress.toFixed(3));
-  timeline.querySelectorAll(".tl-item").forEach(item => {
-    const dot = item.querySelector(".tl-dot").getBoundingClientRect();
-    item.classList.toggle("is-reached", dot.top < mark);
+  timeline.querySelectorAll(".tl-item").forEach((item, i) => {
+    item.classList.toggle("is-reached", dots[i] <= mark);
   });
 }
 
@@ -332,36 +440,52 @@ if (timeline) {
 /* ---------- 6. Page transition: a layer slides between pages ---------- */
 // Always open a page at the top, even when coming back with the Back button
 if ("scrollRestoration" in history) history.scrollRestoration = "manual";
-function goToTop() {
-  document.documentElement.style.scrollBehavior = "auto";
+// Every page opens at the top. Some browsers (and the preview) try to restore
+// the old scroll position after the page has loaded, so this runs again on
+// DOMContentLoaded and load, unless the visitor has already started scrolling
+// or the link points at a section (#about-me, #step-02, ...).
+let userScrolled = false;
+["wheel", "touchstart", "keydown"].forEach(type =>
+  window.addEventListener(type, () => { userScrolled = true; }, { once: true, passive: true }));
+function goToTop(force) {
+  if (!force && (userScrolled || (location.hash && location.hash !== "#top"))) return;
+  const root = document.documentElement;
+  root.style.scrollBehavior = "auto";
   window.scrollTo(0, 0);
-  document.documentElement.style.scrollBehavior = "";
+  requestAnimationFrame(() => { root.style.scrollBehavior = ""; });
 }
 goToTop();
+document.addEventListener("DOMContentLoaded", () => goToTop());
+window.addEventListener("load", () => { goToTop(); setTimeout(() => goToTop(), 60); });
 
-// The loading name switches between English and Japanese with a red glitch.
-// 英道理庵 is the kanji for Adrian (EIDORIAN); Reyhart is written in katakana.
-const NAMES = ["ADRIAN REYHART", "英道理庵 レイハート"];
+// The loading name switches between English, Japanese and Chinese with a soft fade.
+// Each new page carries on from the last name shown.
+const NAMES = ["ADRIAN REYHART", "エイドリアン・レイハート", "阿德里安·雷哈特"];
+const NAME_LANGS = ["en", "ja", "zh"];   // lets the CSS tidy spacing per script
+let nameIndex = 0;
+try { nameIndex = (parseInt(sessionStorage.getItem("nameIndex"), 10) || 0) % NAMES.length; } catch (e) {}
 const transition = document.createElement("div");
 transition.className = "page-transition is-entering";
 transition.setAttribute("aria-hidden", "true");
-transition.innerHTML = '<span class="page-transition-name"><span class="glitch" data-text="ADRIAN REYHART">ADRIAN REYHART</span></span>';
+transition.innerHTML = '<span class="page-transition-name"><span class="glitch"></span></span>';
 document.body.appendChild(transition);
 const glitchText = transition.querySelector(".glitch");
-let nameIndex = 0;
+glitchText.textContent = NAMES[nameIndex];
+glitchText.lang = NAME_LANGS[nameIndex];
 let glitchTimer = null;
 
 function swapName() {
   nameIndex = (nameIndex + 1) % NAMES.length;
+  try { sessionStorage.setItem("nameIndex", nameIndex); } catch (e) {}
   glitchText.classList.add("is-glitching");
   setTimeout(() => {
     glitchText.textContent = NAMES[nameIndex];
-    glitchText.dataset.text = NAMES[nameIndex];
-  }, 120);
-  setTimeout(() => glitchText.classList.remove("is-glitching"), 320);
+    glitchText.lang = NAME_LANGS[nameIndex];
+  }, 220);
+  setTimeout(() => glitchText.classList.remove("is-glitching"), 240);
 }
 function startGlitch() {
-  if (!glitchTimer) glitchTimer = setInterval(swapName, 550);
+  if (!glitchTimer) glitchTimer = setInterval(swapName, 600);
 }
 function stopGlitch() {
   clearInterval(glitchTimer);
@@ -382,7 +506,7 @@ setTimeout(() => {
 document.querySelectorAll("a[href]").forEach(link => {
   const href = link.getAttribute("href");
   const isOtherPage = href && !href.startsWith("#") && !href.startsWith("http") && !href.startsWith("mailto:");
-  if (!isOtherPage || reduceMotion) return;
+  if (!isOtherPage || reduceMotion || link.hasAttribute("download")) return;   // file downloads skip the transition
   link.addEventListener("click", e => {
     if (e.metaKey || e.ctrlKey || e.shiftKey) return;   // let "open in new tab" work
     e.preventDefault();
@@ -396,7 +520,7 @@ document.querySelectorAll("a[href]").forEach(link => {
 // Coming back with the browser's Back button: start at the top and clear the layer
 window.addEventListener("pageshow", e => {
   if (e.persisted) {
-    goToTop();
+    goToTop(true);
     transition.classList.remove("is-covering");
     transition.classList.add("is-leaving-up");
     stopGlitch();
@@ -416,6 +540,65 @@ if (dots.length && "IntersectionObserver" in window) {
     const target = document.querySelector(d.getAttribute("href"));
     if (target) seen.observe(target);
   });
+}
+
+/* ---------- 8. Journal: show where the reader is ----------
+   The contents list highlights the week and post on screen, a red rail
+   beside it fills as you read, and a thin bar runs along the top. */
+const toc = document.querySelector(".journal-toc");
+if (toc) {
+  const links = [...toc.querySelectorAll("a[href^='#']")];
+  const subLinks = links.filter(a => !a.classList.contains("toc-week"));
+  const progressText = document.createElement("p");
+  progressText.className = "toc-progress";
+  toc.insertBefore(progressText, toc.children[1]);
+  const bar = document.createElement("div");
+  bar.className = "read-bar";
+  bar.setAttribute("aria-hidden", "true");
+  bar.innerHTML = "<span></span>";
+  document.body.appendChild(bar);
+  const list = document.querySelector(".journal-posts");
+
+  function updateToc() {
+    const line = window.innerHeight * 0.35;          // the post crossing this line is "being read"
+    let current = null;
+    subLinks.forEach(a => {
+      const el = document.querySelector(a.getAttribute("href"));
+      if (el && el.getBoundingClientRect().top <= line) current = a;
+    });
+    if (!current) current = subLinks[0];
+    let passed = true;
+    subLinks.forEach(a => {
+      a.classList.toggle("is-current", a === current);
+      a.classList.toggle("is-read", passed && a !== current);
+      if (a === current) passed = false;
+      if (a === current) a.setAttribute("aria-current", "location"); else a.removeAttribute("aria-current");
+    });
+    const week = current.closest("ul")?.previousElementSibling;
+    toc.querySelectorAll(".toc-week").forEach(w => w.classList.toggle("is-current", w === week));
+    const idx = subLinks.indexOf(current) + 1;
+    progressText.innerHTML = `Reading <b>${idx}</b> of ${subLinks.length}`;
+
+    // How far through the journal (0 to 1)
+    const box = list.getBoundingClientRect();
+    const read = Math.min(Math.max((line - box.top) / (box.height - window.innerHeight * 0.5), 0), 1);
+    toc.style.setProperty("--read", read.toFixed(3));
+    bar.style.setProperty("--read", read.toFixed(3));
+
+    // Keep the highlighted item visible when the contents list itself scrolls
+    if (toc.scrollHeight > toc.clientHeight) {
+      const r = current.getBoundingClientRect(), t = toc.getBoundingClientRect();
+      if (r.top < t.top + 20 || r.bottom > t.bottom - 20) toc.scrollTop += r.top - t.top - t.height / 2;
+    }
+  }
+  let ticking = false;
+  window.addEventListener("scroll", () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => { updateToc(); ticking = false; });
+  }, { passive: true });
+  window.addEventListener("resize", updateToc);
+  updateToc();
 }
 
 /* ---------- Start ---------- */
