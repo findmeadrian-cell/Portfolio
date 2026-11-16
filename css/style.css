@@ -431,6 +431,9 @@ section[id] { scroll-margin-top: 4.5rem; }
   html:has(main.home-main) { scroll-snap-type: y mandatory; }
   .screen { min-height: 100vh; min-height: 100svh; scroll-snap-align: start; }
   .home-main ~ .site-footer { scroll-snap-align: end; }
+  /* Full-screen sections already leave room for the fixed header inside them,
+     so they snap flush to the top (no 4.5rem offset showing the section above). */
+  .home-main .screen { scroll-margin-top: 0; }
 }
 
 /* Section label with a rule running to the edge: "01 About me ———" */
